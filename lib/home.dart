@@ -9,8 +9,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  double width;
-
+  late double  width;
+late List<String> tabs;
   var tabController;
   int selectedIndex = 0;
 
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage>
         price: "199"),
   ];
 
-  List<String> tabs;
+  
 
   @override
   Widget build(BuildContext context) {

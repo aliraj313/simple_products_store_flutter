@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ProductWidget extends StatelessWidget {
   Product product;
 
-  ProductWidget({Key key, this.product}) : super(key: key);
+  ProductWidget({Key? key,required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

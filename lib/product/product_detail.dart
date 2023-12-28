@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 class ProductDetailPage extends StatefulWidget {
   Product product;
 
-  ProductDetailPage({Key key, this.product}) : super(key: key);
+  ProductDetailPage({Key? key,required this.product}) : super(key: key);
 
   @override
   State<ProductDetailPage> createState() => _ProductDetailPageState();
 }
 
 class _ProductDetailPageState extends State<ProductDetailPage> {
-  double width;
+  late double width;
 
   ProductColor selectedProductColor = ProductColor(name: "");
 
@@ -144,7 +144,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 24),
                             primary: Theme.of(context).primaryColor),
-                        child: Text("Add to cart")),
+                        child: Text("Add to cart",style: TextStyle(color: Colors.white),)),
                   )
                 ],
               ),

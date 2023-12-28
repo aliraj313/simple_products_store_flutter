@@ -5,25 +5,25 @@ class Product {
   String image;
   String name;
   String descryption;
-   String series;
+  String series;
   Color color;
   String price;
   List<ProductColor> productColors;
 
   Product(
-      {this.id,
-      this.image,
-      this.name,
-      this.descryption,
-       this.series,
-      this.color,
-      this.price,
-      this.productColors});
+      {required this.id,
+      required this.image,
+      required this.name,
+      required this.descryption,
+      required this.series,
+      required this.color,
+      required this.price,
+      required this.productColors});
 }
 
 class ProductColor {
-  String name;
-  Color color;
+  String? name;
+  Color? color;
 
   ProductColor({this.name, this.color});
 }

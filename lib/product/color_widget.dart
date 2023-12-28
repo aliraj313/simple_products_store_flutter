@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 
 class ColorWidget extends StatelessWidget {
   ProductColor productColor;
-  Function onTap;
+  VoidCallback onTap;
   bool selected;
 
-  ColorWidget({Key key, this.selected, this.productColor, this.onTap})
+  ColorWidget(
+      {Key? key,
+      required this.selected,
+      required this.productColor,
+      required this.onTap})
       : super(key: key);
 
   @override
@@ -23,7 +27,7 @@ class ColorWidget extends StatelessWidget {
               decoration: BoxDecoration(
                   shape: BoxShape.circle, color: productColor.color),
             ),
-            Text(productColor.name),
+            Text(productColor.name!),
           ],
         ),
         style: OutlinedButton.styleFrom(
